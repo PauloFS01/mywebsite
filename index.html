@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script
+      src="https://kit.fontawesome.com/3d78ac46e3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"
+      rel="jquery"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <nav id="hidden-menu">
+          <!-- <div class="container"> -->
+          <div id="icons-toggle">
+            <i class="fas fa-bars" id="iconMenu"></i>
+            <i class="fas fa-times hidden" id="iconMenu-close"></i>
+          </div>
+          <ul id="navMenu" class="toggle-scale">
+            <li><a href="#Welcome">WELCOME</a></li>
+            <li><a href="#Habilities">HABILIDADES</a></li>
+            <li><a href="#background">BACKGROUND</a></li>
+            <li><a href="#Contact">CONTATO</a></li>
+          </ul>
+          <!-- </div> -->
+        </nav>
+      </header>
+
+      <!--Presentation div begin-->
+      <div id="presentation-container">
+        <div id="proto-container" class="mobile-hiddens">
+          <div class="proto proto-triangle"></div>
+          <div class="proto proto-circle"></div>
+          <div class="proto proto-square"></div>
+        </div>
+        <div class="container presentation">
+          <!--Mobile version-->
+          <div id="mobile-presentation" class="mobile-hiddens">
+            <h1>
+              <span id="first-name">PAULO</span>
+              <span id="surname">FERNANDO</span>
+            </h1>
+            <div class="avatar">
+              <img src="images/picture.jpg" alt="avatar" />
+            </div>
+            <button
+              id="primary-button"
+              onclick="window.location.href='#Habilities'"
+            >
+              MY HABILITIES
+            </button>
+            <button
+              id="secundary-button"
+              onclick="window.location.href='#background'"
+            >
+              MY BIO
+            </button>
+          </div>
+
+          <!--desktop version-->
+          <div id="desktop-presentation" class="desktop-hiddens">
+            <div id="bg-blur"></div>
+            <h1>HELLO, I'M PAULO</h1>
+            <h2>Welcome to my website</h2>
+            <div id="scroll-down">
+              <a href="#Welcome">
+                <h3>SCROLL DOWN</h3>
+                <i class="fas fa-angle-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Welcome div bagin-->
+      <div id="welcome-container">
+        <a name="Welcome" id="Welcome"></a>
+        <div class="container welcome">
+          <div id="welcome-message">
+            <h1>HI THERE!</h1>
+            <!-- <p class="desktop-hiddens ">
+              I am a full-stack web developer, I am based in Paraná Brasil. I
+              have a strong passion for anything related to developing web
+              application.
+            </p> -->
+            <p class="desktop-hiddens">
+              Eu sou desenvolvedor web full-stack, vivo no interior do Paraná.
+              Tenho enorme paixão por tudo ligado a desenvolvimento de
+              aplicações para web.
+            </p>
+            <!-- <p class="mobile-hiddens">
+              welcome to my website I am a full stack Web Developer
+            </p> -->
+            <p class="mobile-hiddens">
+              Bem vindo ao meu site, eu sou desenvolvedor full-stack.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--Habilities div begin-->
+      <a name="Habilities" id="Habilities"> </a>
+      <div id="habilities-container">
+        <div id="habilities-wrapper" class="container habilities">
+          <div class="expertise-area b-rigth b-bottom">
+            <h2><i class="fas fa-code"></i> Front-end</h2>
+            <p>
+              Javascript - HTML - css - Vue - Vuex React - Bootstrap - Vuerify
+              Quasar Cordova
+            </p>
+          </div>
+          <div class="expertise-area b-bottom">
+            <h2><i class="fas fa-server"></i> Back-end</h2>
+            <p>
+              NodeJs - NextJs - Express - Docker - Webpack - MongoDB - SQL -
+              Redis.
+            </p>
+          </div>
+          <div class="expertise-area b-rigth">
+            <h2><i class="fas fa-tools"></i> Tools</h2>
+            <p>
+              I have some experiencie with tool like VS-code, Adoube-XD,
+              versioning softwares, GIT, GitHub, GitLab.
+            </p>
+          </div>
+          <div class="expertise-area">
+            <h2><i class="fas fa-mobile"></i> Mobile</h2>
+            <p>
+              I have some experiencie with tool like Cordova, Quasar, hybrid app
+              and responsive aplications./p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- backgrounds begin -->
+      <a name="background" id="background"></a>
+      <div id="background-container">
+        <div class="container">
+          <h2>Formação</h2>
+          <div id="education">
+            <p>- Técnico em informática - SENAI.</p>
+            <p>
+              - Tecnólogo em Analise e desenvolvimento de sistemas - UniCesumar
+            </p>
+          </div>
+          <h2>Cursos</h2>
+          <div id="courses"></div>
+        </div>
+      </div>
+
+      <!-- Contact begin -->
+      <a name="Contact" id="Contact"></a>
+      <div id="contact-container">
+        <div class="container">
+          <div id="contact-desc">
+            <h2><i class="fas fa-envelope"></i> Mail-me</h2>
+            <form
+              id="form-contact"
+              action="https://formspree.io/mbnjwldm"
+              method="POST"
+            >
+              <div class="email-inputs">
+                <label for="input-name">Nome</label>
+                <input id="input-name" name="name" />
+              </div>
+              <div class="email-inputs">
+                <label for="input-company">Empresa</label>
+                <input type="text" name="input-company" id="input-company" />
+              </div>
+              <div class="email-inputs">
+                <label for="email-input">Email</label>
+                <input type="text" name="email-input" id="input-email" />
+              </div>
+              <div class="email-inputs">
+                <label for="input-message">Menssagem:</label>
+                <textarea
+                  name="input-message"
+                  id="input-message"
+                  rows="4"
+                  cols="40"
+                >
+                </textarea>
+                <button type="submit" id="bnt-send">Enviar</button>
+              </div>
+              <div id="message-status">
+                <div id="status"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- spinner loading  -->
+      <div id="loading-spinner">
+        <img src="images/Eclipse-1.5s-200px.svg" alt="loading svg" />
+      </div>
+
+      <!-- Footer begin -->
+      <div id="footer-container">
+        <!-- <a name="Footer"></a> -->
+        <div id="footer" class="container">
+          <div id="adders" class="mobile-hiddens">
+            <h2>
+              <i class="fas fa-map-marker-alt"></i> Rua Iguaçu 2599, Porecatu PR
+            </h2>
+            <h2>
+              <i class="fas fa-phone-square-alt"></i> Phone (43) 3623-4071
+            </h2>
+          </div>
+          <div id="social">
+            <div>
+              <a href="https://www.linkedin.com/in/paulosilva-p-f-s/">
+                <i class="fab fa-linkedin-in"></i>
+                <!-- linkedIn -->
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/PauloFS01">
+                <i class="fab fa-github"></i>
+                <!-- GitHub -->
+              </a>
+            </div>
+            <div>
+              <a href="https://twitter.com/PDev01">
+                <i class="fab fa-twitter"></i>
+                <!-- Twitter -->
+              </a>
+            </div>
+            <div>
+              <a href="https://www.facebook.com/pfs01">
+                <i class="fab fa-facebook-f"></i>
+                <!-- Twitter -->
+              </a>
+            </div>
+          </div>
+          <div id="adders-desktop" class="desktop-hiddens">
+            <i class="fas fa-map-marker-alt"></i> Rua Iguaçu 2599, Porecatu PR.
+            <i class="fas fa-phone-square-alt"></i> Phone (43) 3623-4071.
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
